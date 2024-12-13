@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Booleans</title>
+        <link rel = "stylesheet" href="rock_paper_scissor.css">
+    </head>
+    <body>
+        <p class = "title">Rock Paper Scissors</p>
+        <button class = "move-button" onclick = "
+        userMove = 'Rock';
+        findComputerMove();
+        printResult();
+        "><img src = "images/rock-emoji.png" class = "move-icon"></button>
+        <button  class = "move-button" onclick = "
+        userMove = 'Paper';
+        findComputerMove();
+        printResult();
+        "><img src = "images/paper-emoji.png" class = "move-icon"></button>
+        <button class = "move-button" onclick = "
+        userMove = 'Scissors';
+        findComputerMove();
+        printResult();
+        "><img src = "images/scissors-emoji.png" class = "move-icon"></button>
+        <p class = "result1"></p>
+        <p class = "moves"></p>
+        <p class = "result"></p>
+        <br>
+        <button  class = "reset-button" onclick = "
+        result.wins = 0;
+        result.ties = 0;
+        result.loss = 0;
+        updateResultDisplay();
+        localStorage.setItem('score', JSON.stringify(result));
+        ">Reset Score</button>
+        <script src = rock_paper_scissor.js>
+            
+        </script>
+    </body>
+</html>
